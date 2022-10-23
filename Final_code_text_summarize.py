@@ -1,16 +1,19 @@
-# You have to add the location of audio file path in "path" at line number 9 and make sure that it path have backslash
+# You have to add the location of audio file path in "path" at line number 16 and make sure that it path have backslash
 
 
 import speech_recognition as sr
+import spacy
 import os
+
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-r=sr.Recognizer()
-path="D:/ytmp3free (mp3cut.net).wav"
-import spacy
+
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
+
+r=sr.Recognizer()
+path="D:/ytmp3free (mp3cut.net).wav"
 
 def makesummary(text):
     stopwords = list(STOP_WORDS)
